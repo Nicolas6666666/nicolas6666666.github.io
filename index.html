@@ -1,9 +1,103 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/2b3c029d52.js" crossorigin="anonymous"></script>
 </head>
 <body>
-Cecheng cao weeeeeee
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src ="image/name.png" class = "logo" alt="picture of my logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+        </nav>
+        <div class="header-text">
+            <p>UCI Student</p>
+            <h1>Hi, I am <span>Cecheng Cao(Nicolas)</span><br>Informatics Major</h1>
+        </div>
+
+    </div>
+</div>
+
+<!--About-->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/PersonalPic.jpg" alt="Picture of me.(left 1st)">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="cont">I am a senior Informatics student at UC Irvine. I am proficient in python 
+                    programming language. I have had two internships, one of which was in the 
+                    client development department at Zoom Video Communications. I completed
+                     multiple UI design projects and group development games during my college years. 
+                     Learned a lot of programming skills and management experience along the 
+                     way. Looking for a software engineering job.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--portfolio-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="image/work1.png" alt="Game video screenshot">
+                <div class="layer">
+                    <h2>Rogue Like Game</h2>
+                    <a href="https://www.youtube.com/watch?v=bkdJezVaPJ4">Click here to check the game prototype testplay</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/work2.png" alt="Screenshot of prototype">
+                <div class="layer">
+                    <h2>Pangolin Sport UI Design</h2>
+                    <a href="https://marvelapp.com/prototype/af9be9j/screen/85386394">Click here to check the sports app prototype UI design</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class = "sub-title">Contact Me</h1>
+                <p><em class="fa-solid fa-envelope"></em>cechengc@uci.edu</p>
+                <p><em class="fa-solid fa-phone"></em>+1 949-878-8866</p>
+                <div class="social-icons">
+                    <a href="" title="discord link"><em class="fa-brands fa-discord"></em></a>
+                    <a href="" title="linkedin link"><em class="fa-brands fa-linkedin"></em></a>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <form>
+                    <label for="Name">Name</label>
+                    <input type="text" name="Name" placeholder="Your Name" id="Name" required>
+                    <label for="email">email</label>
+                    <input type="email" name="email" placeholder="Your Email" id="email" required>
+                    <label for="Message">Message</label>
+                    <textarea name="Message" rows="5" placeholder="Your Message" id="Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
