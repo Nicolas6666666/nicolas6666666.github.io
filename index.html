@@ -21,7 +21,7 @@
                 </ul>
         </nav>
         <div class="header-text">
-            <p>UCI Student</p>
+            <p>Software Engineer Developer</p>
             <h1>Hi, I am <span>Cecheng Cao(Nicolas)</span><br>Informatics Major</h1>
         </div>
 
@@ -34,16 +34,40 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="image/PersonalPic.jpg" alt="Picture of me.(left 1st)">
+                <img src="image/PersonalPic.jpg" alt="Picture of me.">
             </div>
             <div class="about-col-2">
-                <h1 class="sub-title">About Me (Left 1st)</h1>
-                <p class="cont">I am a senior Informatics student at UC Irvine. I am proficient in python 
-                    programming language. I have had two internships, one of which was in the 
-                    client development department at Zoom Video Communications. I completed
-                     multiple UI design projects and group development games during my college years. 
-                     Learned a lot of programming skills and management experience along the 
-                     way. Looking for a software engineering job.</p>
+                <h1 class="sub-title">About Me</h1>
+                <p class="cont">I'm a software engineer in California. 
+                    I have extensive experience in software design and development, 
+                    and am proficient in version control tools. I am graduating from UC Irvine 
+                    in 2023 and currently have a BA in Informatics major. 
+                    I'm looking for a job related to software development.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Software development</span><br>Design & develop software from sketch</li>
+                        <li><span>Full stack development</span><br>Database -> Backend -> Frontend all in one</li>
+                        <li><span>Data management</span><br>Data architectures/pipelines building</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 January - June</span><br>Vico Infrastructure -- Full-stack Software Development</li>
+                        <li><span>2022 September - December</span><br>UCI Geometry Discovery Project -- Full-stack Web App Development</li>
+                        <li><span>2021 July - August</span><br>Zoom -- Client Development Internship</li>
+                        <li><span>2021 March - April</span><br>Shenzhen Sunline -- Client Development Internship</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>UC Irvine - Bachelor</span><br>Informatics Major 2018-2023</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -99,5 +123,23 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
 </body>
 </html>
