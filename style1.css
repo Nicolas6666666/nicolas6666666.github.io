@@ -13,6 +13,7 @@ body{
     background: #ffefe8;
     color: rgb(95, 100, 121)
 }
+/* #ffefe8 */
 
 #header{
     width: 100%;
@@ -55,7 +56,7 @@ nav ul li a::after{
     content: "";
     width: 0%;
     height: 3px;
-    background: #5bc472;
+    background: #ff51b6;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -112,13 +113,14 @@ nav ul li a:hover::after{
 }
 
 .tab-titles{
+    color:#6c93fd;
     display: flex;
     margin: 20px 0px 40px;
 }
 
 .tab-links{
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -128,7 +130,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #5bc472;
+    background: #ff51b6;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -141,13 +143,15 @@ nav ul li a:hover::after{
 
 
 .tab-contents ul li{
+    color:rgb(95, 100, 121);
     list-style: none;
     margin: 10px 0px;
 }
 
 .tab-contents ul li span{
-    color: #5bc472;
+    color: #6c93fd;
 }
+
 
 .tab-contents{
     display: none;
@@ -161,6 +165,8 @@ nav ul li a:hover::after{
 .cont{
     color: rgb(95, 100, 121);
     font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 /*------------portfolio--------------*/
