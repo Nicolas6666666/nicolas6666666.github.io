@@ -19,6 +19,7 @@
                 <ul>
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -31,7 +32,7 @@
     </div>
 </div>
 
-<!--About-->
+<!----------------------About----------------------->
 
 <div id="about">
     <div class="container">
@@ -75,7 +76,36 @@
         </div>
     </div>
 </div>
-<!--portfolio-->
+
+<!----------------------services------------------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Backend Development</h2>
+                <p>Master a variety of back-end languages and frameworks, proficient in SQL.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Familiar with multiple front-end languages and popular frameworks, including angular, vue, react, rest API, Django, flask.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>Years of web/application UI design experience, senior art skills.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----------------------portfolio---------------------->
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
@@ -83,22 +113,32 @@
             <div class="work">
                 <img src="image/work1.png" alt="Game video screenshot">
                 <div class="layer">
-                    <h2>Rogue Like Game</h2>
-                    <a href="https://www.youtube.com/watch?v=bkdJezVaPJ4">Click here to check the game prototype testplay</a>
+                    <h3>Rogue Like Game</h3>
+                    <p>The game engine development and game character action art design</p>
+                    <a href="https://www.youtube.com/watch?v=bkdJezVaPJ4"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="work">
                 <img src="image/work2.png" alt="Screenshot of prototype">
                 <div class="layer">
-                    <h2>Pangolin Sport UI Design</h2>
-                    <a href="https://marvelapp.com/prototype/af9be9j/screen/85386394">Click here to check the sports app prototype UI design</a>
+                    <h3>Pangolin Sport UI Design</h3>
+                    <p>Application function & UI design</p>
+                    <a href="https://marvelapp.com/prototype/af9be9j/screen/85386394"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/work3.png" alt="Screenshot of prototype">
+                <div class="layer">
+                    <h3>Geometry Discovery Project Web Development</h3>
+                    <p>Website project Full-stack development</p>
+                    <a href="https://gdp.math.uci.edu/#/"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
         </div>
 
     </div>
 </div>
-<!-- Contact-->
+<!----------------------Contact----------------------->
 <div id="contact">
     <div class="container">
         <div class="row">
@@ -108,23 +148,27 @@
                 <p><em class="fa-solid fa-phone"></em>+1 949-878-8866</p>
                 <div class="social-icons">
                     <a href="" title="discord link"><em class="fa-brands fa-discord"></em></a>
-                    <a href="" title="linkedin link"><em class="fa-brands fa-linkedin"></em></a>
+                    <a href="" title="https://www.linkedin.com/in/nicolas-cao-007117252/"><em class="fa-brands fa-linkedin"></em></a>
                 </div>
+                <a href="image/Nicolas_Cao_CV_V5.pdf" download class="btn">Download CV</a>
             </div>
 
+
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <label for="Name">Name</label>
                     <input type="text" name="Name" placeholder="Your Name" id="Name" required>
                     <label for="email">email</label>
-                    <input type="email" name="email" placeholder="Your Email" id="email" required>
+                    <input type="email" name="Email" placeholder="Your Email" id="email" required>
                     <label for="Message">Message</label>
                     <textarea name="Message" rows="5" placeholder="Your Message" id="Message"></textarea>
                     <button type="submit" class="btn">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
+
 </div>
 
 <script>
@@ -144,5 +188,23 @@
     }
 
 </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxSU9VE5xOqL9Jqh82eEDqUav_LXp5Uj4fcYpy0tEfxIa0ZYEFeyqp_sd8shAHMGLxN/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
